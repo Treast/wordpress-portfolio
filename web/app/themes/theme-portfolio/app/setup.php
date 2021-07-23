@@ -129,4 +129,23 @@ add_action('after_setup_theme', function () {
     sage('blade')->compiler()->directive('asset', function ($asset) {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
+
+    \App\Models\Project::init();
+});
+
+/** Remove jQuery */
+// add_action('init', function() {
+//     if (!is_admin() && !is_admin_bar_showing()) {
+//         wp_deregister_script('jquery');
+//         wp_register_script('jquery', false);
+//     }
+// });
+
+add_action('admin_head', function() {
+    echo '<style>
+    .php-error #adminmenuback,
+    .php-error #adminmenuwrap {
+      margin-top: 0;
+    }
+    </style>';
 });

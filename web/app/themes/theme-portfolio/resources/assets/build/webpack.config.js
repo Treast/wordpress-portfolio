@@ -130,9 +130,6 @@ let webpackConfig = {
   resolveLoader: {
     moduleExtensions: ['-loader'],
   },
-  externals: {
-    jquery: 'jQuery',
-  },
   plugins: [
     new CleanPlugin([config.paths.dist], {
       root: config.paths.root,
@@ -153,12 +150,12 @@ let webpackConfig = {
       allChunks: true,
       disable: (config.enabled.watcher),
     }),
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery',
-      Popper: 'popper.js/dist/umd/popper.js',
-    }),
+    // new webpack.ProvidePlugin({
+    //   $: 'jquery',
+    //   jQuery: 'jquery',
+    //   'window.jQuery': 'jquery',
+    //   Popper: 'popper.js/dist/umd/popper.js',
+    // }),
     new webpack.LoaderOptionsPlugin({
       minimize: config.enabled.optimize,
       debug: config.enabled.watcher,

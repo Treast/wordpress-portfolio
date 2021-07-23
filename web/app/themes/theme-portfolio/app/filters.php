@@ -89,3 +89,6 @@ add_filter('comments_template', function ($comments_template) {
 
     return $comments_template;
 }, 100);
+
+// Remove Gutenberg
+add_filter('use_block_editor_for_post', '__return_false', 10);
