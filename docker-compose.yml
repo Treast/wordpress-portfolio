@@ -1,0 +1,38 @@
+version: "3"
+services:
+    www:
+        build: .
+        ports: 
+            - 8000:80
+        volumes:
+            - ./:/var/www/html/
+        links:
+            - db
+        networks:
+            - default
+    db:
+        image: mysql
+        ports: 
+            - "3306:3306"
+        environment:
+            MYSQL_DATABASE: portfolio
+            MYSQL_USER: portfolio
+            MYSQL_PASSWORD: xOGI^qDHS7mGLlYIZg
+            MYSQL_ROOT_PASSWORD: xOGI^qDHS7mGLlYIZg
+        volumes:
+            - ./_docker/dumps:/docker-entrypoint-initdb.d
+            - persistent:/var/lib/mysql
+        networks:
+            - default
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        links: 
+            - db:db
+        ports:
+            - 8001:80
+        environment:
+            MYSQL_USER: portfolio
+            MYSQL_PASSWORD: xOGI^qDHS7mGLlYIZg
+            MYSQL_ROOT_PASSWORD: xOGI^qDHS7mGLlYIZg
+volumes:
+    persistent:
