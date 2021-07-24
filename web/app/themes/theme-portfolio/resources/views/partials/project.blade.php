@@ -1,13 +1,15 @@
-<article class="project grid">
+<article class="project">
     <h2>{{ $project->title }}</h2>
-    <div class="project-content">
-        <ul>
-            <li>{{ $project->type }}</li>
-            <li>{{ $project->role }}</li>
-        </ul>
-        <a href="#" class="link">Voir le projet</a>
-    </div>
-    <div class="project-cover">
-        {!! $project->thumbnail !!}
-    </div>
+    <a href="{{ $project->permalink }}" class="grid">
+        <div class="project-content">
+            <ul>
+                <li>{{ $project->type }}</li>
+                <li>{{ $project->role }}</li>
+            </ul>
+            <span class="link">Voir le projet</span>
+        </div>
+        <div class="project-cover">
+            {!! $project->thumbnail !!}
+        </div>
+    </a>
 </article>

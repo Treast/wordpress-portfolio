@@ -25,6 +25,12 @@
   }
 }
 
+html,
+body,
+* {
+  box-sizing: border-box;
+}
+
 html body {
   font-family: $font--text;
   color: $color--primary;
@@ -88,7 +94,8 @@ span.link {
     transition: left 0.3s ease, transform 0.3s ease;
   }
 
-  &:hover {
+  &:hover,
+  &--hover {
     padding-left: 0;
     padding-right: 105px;
 

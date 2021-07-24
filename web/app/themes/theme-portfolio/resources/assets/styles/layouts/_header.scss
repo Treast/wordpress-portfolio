@@ -1,4 +1,8 @@
+$paddingHeader: 30px;
+
 #header {
+  padding-top: $paddingHeader;
+  padding-bottom: $paddingHeader;
   align-items: center;
 
   #logo {
@@ -17,6 +21,10 @@
       list-style: none;
 
       li a {
+        font-size: 12px;
+        letter-spacing: 3.2px;
+        font-weight: 600;
+        text-transform: uppercase;
         padding: 10px 25px;
       }
     }

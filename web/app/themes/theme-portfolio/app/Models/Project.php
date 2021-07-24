@@ -17,6 +17,7 @@ class Project extends AbstractCPT {
     public $id;
     public $title;
     public $subtitle;
+    public $permalink;
     public $thumbnail;
     public $type;
     public $role;
@@ -31,8 +32,9 @@ class Project extends AbstractCPT {
 
     public function __construct($id) {
         $this->id = $id;
-        $this->title = get_the_title($id);
-        $this->thumbnail = get_the_post_thumbnail($id);
+        $this->title = get_the_title($this->id);
+        $this->thumbnail = get_the_post_thumbnail($this->id);
+        $this->permalink = get_the_permalink($this->id);
         $this->subtitle = get_field('subtitle', $this->id);
         $this->type = get_field('type', $this->id);
         $this->role = get_field('role', $this->id);

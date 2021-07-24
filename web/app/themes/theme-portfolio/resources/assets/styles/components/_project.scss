@@ -31,6 +31,8 @@ article.project {
     font-family: $font--title;
     margin: 0;
     z-index: 3;
+    user-select: none;
+    pointer-events: none;
   }
 
   .project-cover {
@@ -54,7 +56,29 @@ article.project {
     }
   }
 
-  &:hover .project-cover::after {
-    opacity: 0;
+  &:hover {
+    .project-content span.link {
+      @extend span.link--hover;
+    }
+
+    .project-cover::after {
+      opacity: 0;
+    }
+  }
+
+  &:nth-child(even) {
+    .project-content {
+      grid-column: 9 / 13;
+    }
+
+    .project-cover {
+      grid-column: 2 / 8;
+      order: -1;
+    }
+
+    h2 {
+      left: unset;
+      right: 1 / 12 * 100%;
+    }
   }
 }
