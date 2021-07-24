@@ -29,6 +29,8 @@ html,
 body,
 * {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html body {
@@ -80,6 +82,7 @@ span.link {
   font-weight: 600;
   text-transform: uppercase;
   transition: padding 0.3s ease;
+  letter-spacing: 2.6px;
 
   &::before {
     content: "";
@@ -104,4 +107,10 @@ span.link {
       transform: translateY(-50%) translateX(-100%);
     }
   }
+}
+
+p {
+  font-size: 14px;
+  line-height: 25px;
+  color: $color--light-gray;
 }

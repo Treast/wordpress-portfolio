@@ -1,0 +1,42 @@
+.page-header {
+  align-items: center;
+  padding-top: 135px;
+  padding-bottom: 250px;
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: $color--light-gray;
+    text-transform: uppercase;
+    letter-spacing: 2.6px;
+    font-weight: 400;
+  }
+
+  h1 {
+    font-size: 110px;
+    font-weight: 700;
+    line-height: 130px;
+    font-family: $font--title;
+    text-transform: uppercase;
+    margin: 0;
+    word-break: break-word;
+  }
+
+  .page-header-content {
+    grid-column: 1 / 9;
+
+    h2 {
+      margin-bottom: 35px;
+    }
+  }
+
+  .page-header-annexe {
+    grid-column: 10 / 13;
+
+    a.link {
+      margin-top: 100px;
+      transform-origin: center left;
+      transform: rotate(90deg);
+    }
+  }
+}
