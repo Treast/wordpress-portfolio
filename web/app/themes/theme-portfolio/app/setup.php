@@ -134,12 +134,14 @@ add_action('after_setup_theme', function () {
 });
 
 /** Remove jQuery */
-// add_action('init', function() {
-//     if (!is_admin() && !is_admin_bar_showing()) {
-//         wp_deregister_script('jquery');
-//         wp_register_script('jquery', false);
-//     }
-// });
+add_action('init', function() {
+    register_nav_menus(
+        array(
+         'main-menu' => __( 'Main Menu' ),
+         'footer-menu' => __( 'Footer Menu' ),
+         )
+    );
+});
 
 add_action('admin_head', function() {
     echo '<style>

@@ -1,2 +1,24 @@
-// TODO: .banner .nav li {}
-// TODO: .banner .nav a {}
+#header {
+  align-items: center;
+
+  #logo {
+    display: block;
+    height: 45px;
+    width: 45px;
+    grid-column: span 1;
+  }
+
+  nav {
+    grid-column: 7 / 13;
+
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      list-style: none;
+
+      li a {
+        padding: 10px 25px;
+      }
+    }
+  }
+}

@@ -39,4 +39,23 @@ abstract class AbstractCPT {
 
         register_post_type(get_called_class()::NAME, $args);
     }
+
+    public static function findAll($customArgs = []) {
+        $defaultArgs = array(  
+            'post_type' => get_called_class()::NAME,
+            'post_status' => 'publish',
+            'posts_per_page' => -1, 
+            'orderby' => 'date', 
+            'order' => 'DESC', 
+        );
+
+        $args = array_merge($defaultArgs, $customArgs);
+
+        $posts = get_posts($args);
+        $model = get_called_class();
+
+        return array_map(function($post) use ($model) {
+            return new $model($post->ID);
+        }, $posts);
+    }
 }
