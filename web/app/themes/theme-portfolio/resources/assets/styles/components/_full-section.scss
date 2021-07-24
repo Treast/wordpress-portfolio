@@ -32,7 +32,7 @@
     }
   }
 
-  .full-section-content {
+  .full-section__content {
     grid-column: 2 / 7;
 
     p {
@@ -40,7 +40,7 @@
     }
   }
 
-  .full-section-annexe {
+  .full-section__annexe {
     display: flex;
     flex-direction: column;
     align-items: flex-end;

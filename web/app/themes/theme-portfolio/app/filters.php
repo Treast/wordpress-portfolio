@@ -14,7 +14,7 @@ add_filter('body_class', function (array $classes) {
     }
 
     if(is_post_type_archive('portfolio')) {
-        $classes[] = 'page-footer--inverse';
+        $classes[] = 'page__footer--inverse';
     }
 
     /** Add class if sidebar is active */

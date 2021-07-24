@@ -22,7 +22,7 @@
     word-break: break-word;
   }
 
-  .page-header-content {
+  .page-header__content {
     grid-column: 1 / 9;
 
     h2 {
@@ -30,7 +30,7 @@
     }
   }
 
-  .page-header-annexe {
+  .page-header__annexe {
     grid-column: 10 / 13;
 
     a.link {
@@ -44,7 +44,7 @@
     padding-top: 100px;
     padding-bottom: 20px;
 
-    .page-header-content {
+    .page-header__content {
       grid-column: 1 / 6;
     }
   }

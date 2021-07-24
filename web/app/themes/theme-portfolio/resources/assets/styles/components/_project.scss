@@ -4,7 +4,7 @@ article.project {
   margin-bottom: 150px;
   align-items: flex-end;
 
-  .project-content {
+  .project__content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -36,7 +36,7 @@ article.project {
     text-transform: uppercase;
   }
 
-  .project-cover {
+  .project__cover {
     @extend .coverImage;
 
     grid-column: 6 / 12;
@@ -68,11 +68,11 @@ article.project {
   }
 
   &:nth-child(odd) {
-    .project-content {
+    .project__content {
       grid-column: 9 / 13;
     }
 
-    .project-cover {
+    .project__cover {
       grid-column: 2 / 8;
       order: -1;
     }
