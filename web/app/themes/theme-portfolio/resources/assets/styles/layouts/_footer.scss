@@ -1,7 +1,9 @@
 footer {
+  position: relative;
   align-items: flex-end;
   padding-bottom: 50px;
   margin-top: -182px;
+  z-index: 2;
 
   p.copyright {
     grid-column: 2 / 8;
@@ -29,5 +31,13 @@ footer {
         letter-spacing: 2.6px;
       }
     }
+  }
+}
+
+body.page-footer--inverse footer {
+  color: #000;
+
+  p {
+    color: $color--dark-gray;
   }
 }

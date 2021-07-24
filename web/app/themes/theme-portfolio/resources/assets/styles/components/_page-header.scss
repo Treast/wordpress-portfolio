@@ -39,4 +39,13 @@
       transform: rotate(90deg);
     }
   }
+
+  &--small {
+    padding-top: 100px;
+    padding-bottom: 20px;
+
+    .page-header-content {
+      grid-column: 1 / 6;
+    }
+  }
 }
