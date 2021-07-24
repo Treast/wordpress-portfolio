@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,700&family=Playfair+Display:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap");
 
 /** Import everything from autoload */
 @import "common/variables";
@@ -14,12 +14,16 @@
 
 /** Import theme styles */
 @import "common/global";
+@import "common/typography";
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";
 @import "components/wp-classes";
 @import "components/page-header";
+@import "components/projects-list";
 @import "components/project";
+@import "components/inner-text";
+@import "components/full-section";
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";

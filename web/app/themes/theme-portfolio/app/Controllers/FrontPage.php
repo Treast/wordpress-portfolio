@@ -12,4 +12,8 @@ class FrontPage extends Controller
     public function projects() {
         return Project::findAll();
     }
+
+    public function projectsArchives() {
+        return get_post_type_archive_link('portfolio');
+    }
 }

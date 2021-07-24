@@ -1,0 +1,15 @@
+.inner-text {
+  padding-bottom: 200px;
+
+  .inner-text-content {
+    grid-column: 2 / 9;
+
+    p {
+      font-size: 20px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 50px;
+      line-height: 35px;
+    }
+  }
+}
