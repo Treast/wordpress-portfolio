@@ -3,15 +3,6 @@
   padding-top: 135px;
   padding-bottom: 200px;
 
-  h2 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: $color--light-gray;
-    text-transform: uppercase;
-    letter-spacing: 2.6px;
-    font-weight: 400;
-  }
-
   h1 {
     font-size: 110px;
     font-weight: 700;
@@ -46,6 +37,15 @@
 
     .page-header__content {
       grid-column: 1 / 6;
+    }
+  }
+
+  .page-header__image {
+    grid-column: 2 / 8;
+    margin-top: 100px;
+
+    picture {
+      height: 380px;
     }
   }
 }

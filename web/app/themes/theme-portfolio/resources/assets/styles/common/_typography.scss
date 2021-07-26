@@ -58,6 +58,16 @@ span.link {
   }
 }
 
+a:hover span.link {
+  padding-left: 0;
+  padding-right: 105px;
+
+  &::before {
+    left: 100%;
+    transform: translateY(-50%) translateX(-100%);
+  }
+}
+
 p {
   font-size: 14px;
   line-height: 25px;
@@ -81,4 +91,13 @@ dl {
   dt {
     font-size: 14px;
   }
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: $color--light-gray;
+  text-transform: uppercase;
+  letter-spacing: 2.6px;
+  font-weight: 400;
 }

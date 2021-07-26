@@ -41,3 +41,7 @@ body.page__footer--inverse footer {
     color: $color--dark-gray;
   }
 }
+
+body.no-footer footer {
+  display: none;
+}

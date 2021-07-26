@@ -34,6 +34,9 @@ article.project {
     user-select: none;
     pointer-events: none;
     text-transform: uppercase;
+    color: #fff;
+    letter-spacing: normal;
+    font-weight: 700;
   }
 
   .project__cover {
@@ -58,11 +61,7 @@ article.project {
   }
 
   &:hover {
-    .project-content span.link {
-      @extend span.link--hover;
-    }
-
-    .project-cover::after {
+    .project__cover::after {
       opacity: 0;
     }
   }

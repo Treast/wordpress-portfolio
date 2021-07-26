@@ -1,0 +1,13 @@
+.full-image {
+  margin-top: 200px;
+  margin-bottom: 240px;
+
+  .full-image__content {
+    grid-column: 2 / 12;
+
+    h2 {
+      margin-bottom: 75px;
+      text-align: center;
+    }
+  }
+}

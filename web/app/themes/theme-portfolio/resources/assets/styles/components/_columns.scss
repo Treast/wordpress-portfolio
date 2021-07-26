@@ -1,0 +1,22 @@
+.columns {
+  align-items: center;
+
+  .col {
+    &:nth-child(odd) {
+      grid-column: 2 / 6;
+    }
+
+    &:nth-child(even) {
+      grid-column: 7 / 12;
+    }
+
+    p {
+      color: $color--light-gray;
+      margin-bottom: 40px;
+    }
+
+    picture {
+      height: 320px;
+    }
+  }
+}
