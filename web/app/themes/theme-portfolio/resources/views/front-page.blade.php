@@ -49,7 +49,7 @@
     <div class="inner-text__content">
       {!! $contact->content !!}
 
-      <a href="#" class="link">Contactez-moi</a>
+      <a href="/contact" class="link">Contactez-moi</a>
     </div>
   </section>
 @endsection

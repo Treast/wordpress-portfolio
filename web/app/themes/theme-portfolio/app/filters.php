@@ -26,6 +26,11 @@ add_filter('body_class', function (array $classes) {
         $classes[] = 'no-footer';
     }
 
+    if(is_page_template('views/template-contact.blade.php')) {
+        wpcf7_enqueue_scripts();
+        wpcf7_enqueue_styles();
+    }
+
     /** Clean up class names for custom templates */
     $classes = array_map(function ($class) {
         return preg_replace(['/-blade(-php)?$/', '/^page-template-views/'], '', $class);
@@ -100,3 +105,7 @@ add_filter('comments_template', function ($comments_template) {
 
 // Remove Gutenberg
 add_filter('use_block_editor_for_post', '__return_false', 10);
+
+// Disable CF7 on all pages
+add_filter( 'wpcf7_load_js', '__return_false' );
+add_filter( 'wpcf7_load_css', '__return_false' );

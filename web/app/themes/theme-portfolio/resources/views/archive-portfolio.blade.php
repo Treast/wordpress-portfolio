@@ -14,7 +14,7 @@
     <div class="inner-text__content">
       <p>Vous avez besoin d’un développeur pour un projet ?</p>
 
-      <a href="#" class="link link--inverse">Contactez-moi</a>
+      <a href="/contact" class="link link--inverse">Contactez-moi</a>
     </div>
   </section>
 @endsection

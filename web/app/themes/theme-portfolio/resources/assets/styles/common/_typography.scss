@@ -15,7 +15,8 @@ a {
 }
 
 a.link,
-span.link {
+span.link,
+input[type="submit"].link {
   position: relative;
   display: inline-block;
   padding: 10px 10px 10px 105px;
@@ -24,6 +25,9 @@ span.link {
   text-transform: uppercase;
   transition: padding 0.3s ease;
   letter-spacing: 2.6px;
+  background: none;
+  box-shadow: none;
+  border: none;
 
   &::before {
     content: "";
